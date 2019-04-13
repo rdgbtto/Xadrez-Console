@@ -43,6 +43,18 @@ namespace tabuleiro
             p.posicao = pos;
         }
 
+        public Peca retirarPeca(Posicao pos)
+        {
+            if(peca(pos) == null)
+            {
+                return null;
+            }
+            Peca aux = peca(pos); // Armazena a peça do tabuleiro em uma variavel auxiliar
+            aux.posicao = null; // Marca sua posição como nulo
+            pecas[pos.linha, pos.coluna] = null; // Marca a posição no tabuleiro como null
+            return aux; // Retorna a peça retirada
+        }
+
         public bool posicaoValida(Posicao pos)
         {
             if (pos.linha < 0 || pos.linha >= linhas ||
