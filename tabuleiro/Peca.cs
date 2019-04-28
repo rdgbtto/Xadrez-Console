@@ -41,7 +41,7 @@
             return false;
         }
 
-        public bool podeMoverPara(Posicao pos) => movimentosPossiveis()[pos.linha, pos.coluna];
+        public bool movimentoPossivel(Posicao pos) => movimentosPossiveis()[pos.linha, pos.coluna];
 
         public abstract bool[,] movimentosPossiveis();
     }
