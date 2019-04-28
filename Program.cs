@@ -39,12 +39,14 @@ namespace Xadrez_Console
                         Console.ReadKey();
                     }
                 }
+                Console.Clear();
+                Tela.imprimirPartida(partida);
+                Console.WriteLine("ENTER para sair...");
             }
             catch (TabuleiroException e)
             {
                 Console.WriteLine(e.Message);
             }
-
             Console.ReadKey();
         }
     }
